@@ -1,13 +1,13 @@
-package menu;
+package lojaDeTenis.menu;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Menu {
 	
-
+	private static Scanner leia = new Scanner(System.in);
 	public static void main(String[] args) {
-		Scanner leia = new Scanner(System.in);
+		
 		int opcao;
 		boolean finalizar = false;
 
@@ -41,30 +41,41 @@ public class Menu {
 				
 			case 1:
 				System.out.println("Cadastrar");
+				KeyPress();
 				break;
 				
 			case 2:
 				System.out.println("Listar Todos");
+				KeyPress();
 				break;
 				
 			case 3:
 				System.out.println("Listar prod");
+				KeyPress();
 				break;
 				
 			case 4:
 				System.out.println("Atualizar");
+				KeyPress();
 				break;
 				
 			case 5:
 				System.out.println("Deletar");
+				KeyPress();
 				break;
 				
 			case 0:
-				System.out.println("Sair");
+				System.out.println("Sistema finalizado");
+				finalizar = true;
+				
 				break;
 				
 			}
 		}
-
+		
+	}
+	public static void KeyPress() {
+		System.out.println( "\n\nPressione Enter para continuar...");
+		leia.nextLine();
 	}
 }
